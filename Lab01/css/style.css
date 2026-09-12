@@ -1,0 +1,120 @@
+/* evitar margenes raros del navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuracion general de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto; /* Contenido al centro */
+}
+
+/* Encabezado */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 25px 20px;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Navegación */
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #e0e6ed;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* Área principal de contenido */
+main {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* Secciones dentro de main */
+section {
+    margin-bottom: 25px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #004080;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+section p {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Tabla Estilizada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #004080;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+}
+
+td {
+    border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+    background-color: #f8f9fa; /* Efecto al pasar el cursor */
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+    font-size: 0.9rem;
+}
