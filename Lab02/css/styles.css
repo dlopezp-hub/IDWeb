@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* (Box Model) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 15px;
+}
+
+/* (Card UI) */
+.card-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.5px;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: #86868b;
+    margin-top: 4px;
+}
+
+/* fieldset */
+fieldset {
+    border: 1px solid #e5e5ea;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fbfbfd;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #0066cc;
+    padding: 0 8px;
+}
+
+/* Grupos y Etiquetas */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #3a3a3c;
+}
+
+/* Entradas  */
+.form-input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d2d2d7;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-input:hover {
+    border-color: #a1a1a6;
+}
+
+.form-input:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15);
+}
+
+/* buttons,Checkbox */
+.radio-group label {
+    margin-right: 15px;
+    font-size: 0.9rem;
+    color: #424245;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-size: 0.85rem;
+    color: #424245;
+    cursor: pointer;
+}
+
+/* Botón de Envió */
+.btn-submit {
+    width: 100%;
+    background-color: #0071e3;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 980px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #0077ed;
+    transform: scale(1.01);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+.btn-submit:disabled {
+    background-color: #d2d2d7;
+    cursor: not-allowed;
+}
+
+/* Animacion entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
