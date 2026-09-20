@@ -1,4 +1,4 @@
-/* 1. Reseteo global y Modelo de Caja (Box Model) prescrito en la guía */
+/* 1. Reseteo global y Modelo de Caja (Box Model) */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,7 +14,7 @@ body {
     padding: 20px;
 }
 
-/* 3. Tarjeta contenedora (Card UI) */
+/* 3. Tarjeta contenedora (ui) */
 .card-container {
     background-color: #ffffff;
     width: 100%;
