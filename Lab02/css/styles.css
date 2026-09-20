@@ -1,154 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-
-/* (Box Model) */
+/* 1. Reseteo global y Modelo de Caja (Box Model) prescrito en la guía */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* 2. Fondo de pantalla y centrado del contenido */
 body {
-    background-color: #f5f5f7;
-    color: #1d1d1f;
+    background-color: #f4f6f9;
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 30px 15px;
+    padding: 20px;
 }
 
-/* (Card UI) */
+/* 3. Tarjeta contenedora (Card UI) */
 .card-container {
-    background: #ffffff;
+    background-color: #ffffff;
     width: 100%;
-    max-width: 550px;
-    border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 4. Encabezado del formulario */
 .form-header {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .form-header h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #1d1d1f;
-    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+    color: #333333;
 }
 
 .form-header p {
     font-size: 0.9rem;
-    color: #86868b;
-    margin-top: 4px;
+    color: #666666;
 }
 
-/* fieldset */
+/* 5. Agrupación con fieldset y legend */
 fieldset {
-    border: 1px solid #e5e5ea;
-    border-radius: 12px;
-    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    padding: 15px;
     margin-bottom: 20px;
-    background-color: #fbfbfd;
 }
 
 legend {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #0066cc;
-    padding: 0 8px;
+    font-weight: bold;
+    color: #3182ce;
+    padding: 0 5px;
 }
 
-/* Grupos y Etiquetas */
+/* 6. Espaciado de grupos de campos */
 .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
+/* 7. Etiquetas del formulario */
 .form-label {
     display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
     font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: #3a3a3c;
+    color: #333333;
 }
 
-/* Entradas  */
+/* 8. Entradas de texto, selección y área de texto */
 .form-input {
     width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #d2d2d7;
-    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
     font-size: 0.95rem;
-    background-color: #ffffff;
-    outline: none;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s;
 }
 
-.form-input:hover {
-    border-color: #a1a1a6;
-}
-
+/* Estado interactivo al hacer foco (:focus) */
 .form-input:focus {
-    border-color: #0066cc;
-    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.15);
+    border-color: #3182ce;
+    outline: none;
+    box-shadow: 0 0 5px rgba(49, 130, 206, 0.5);
 }
 
-/* buttons,Checkbox */
-.radio-group label {
-    margin-right: 15px;
-    font-size: 0.9rem;
-    color: #424245;
-    cursor: pointer;
-}
-
+/* 9. Botones de selección y Checkbox */
+.radio-group label,
 .checkbox-group label {
-    font-size: 0.85rem;
-    color: #424245;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    color: #333333;
     cursor: pointer;
 }
 
-/* Botón de Envió */
+/* 10. Botón de envío y pseudo-clase :hover */
 .btn-submit {
     width: 100%;
-    background-color: #0071e3;
-    color: white;
+    background-color: #3182ce;
+    color: #ffffff;
     border: none;
-    padding: 14px;
-    border-radius: 980px;
+    padding: 12px;
+    border-radius: 4px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 .btn-submit:hover {
-    background-color: #0077ed;
-    transform: scale(1.01);
-}
-
-.btn-submit:active {
-    transform: scale(0.98);
-}
-
-.btn-submit:disabled {
-    background-color: #d2d2d7;
-    cursor: not-allowed;
-}
-
-/* Animacion entrada */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background-color: #2b6cb0;
 }
