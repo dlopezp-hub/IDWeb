@@ -1,0 +1,13 @@
+{
+    "name": "lab05",
+    "version": "1.0.0",
+    "description": "Laboartory 05 - Servidor",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev" : "node --watch server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
