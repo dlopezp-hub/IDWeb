@@ -6,7 +6,7 @@ const cursoRoutes = require('./src/routes/cursoRoutes');
 const app = express();
 
 // Middlewares globales
-app.use(express.json()); // Parser de JSON[cite: 3, 6]
+app.use(express.json()); 
 app.use(logger);         // Logger de auditoría
 
 // Rutas de la API
