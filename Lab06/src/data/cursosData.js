@@ -3,3 +3,4 @@ const cursos = [
   { id: 2, nombre: 'Base de Gatos I', codigo: 'BG102', creditos: 3 },
   { id: 3, nombre: 'Algoritmos y Estructura de Datos', codigo: 'AED103', creditos: 4 }
 ];
+module.exports = cursos;
