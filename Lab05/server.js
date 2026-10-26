@@ -3,10 +3,8 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = 3000;
-
 const server = http.createServer((req, res) => {
   const { method, url } = req;
-
   //RUTAS (API)
   if (url === '/api/estudiantes') {
     
@@ -22,7 +20,6 @@ const server = http.createServer((req, res) => {
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(data);
       });
-
     } else if (method === 'POST') {
       let body = '';
 
@@ -34,16 +31,13 @@ const server = http.createServer((req, res) => {
         try {
           const nuevoEstudiante = JSON.parse(body);
           const filePath = path.join(__dirname, 'data', 'estudiantes.json');
-
           fs.readFile(filePath, 'utf8', (err, data) => {
             if (err) {
               res.writeHead(500, { 'Content-Type': 'application/json' });
               return res.end(JSON.stringify({ message: 'Error interno del servidor' }));
             }
-
             const estudiantes = JSON.parse(data);
             estudiantes.push(nuevoEstudiante);
-
             fs.writeFile(filePath, JSON.stringify(estudiantes, null, 2), err => {
               if (err) {
                 res.writeHead(500, { 'Content-Type': 'application/json' });
@@ -59,7 +53,6 @@ const server = http.createServer((req, res) => {
         }
       });
     }
-
   } else {
     let fileName = url === '/' ? 'index.html' : url;
     const filePath = path.join(__dirname, 'public', fileName);
@@ -83,7 +76,6 @@ const server = http.createServer((req, res) => {
     });
   }
 });
-
 server.listen(PORT, () => {
   console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
 });
